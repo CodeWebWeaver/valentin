@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем святого Валентина!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <div class="container">
+        <button id="showContentButton">Вітання :)</button> <!-- Кнопка для отображения контента -->
+        <div id="hiddenContent" style="display: none;"> <!-- Скрытый контент, который будет отображаться после нажатия -->
+            <div class="card">
+                <h1>З Днем святого Валентина, <span class="her-name">Сашуня!</span></h1>
+                <img class="cats-img" src="cats-hearth.png" alt="Валентинка">
+                <p class="typing-text">Ти є подарунок долі якому я безмежно радий. Обожню цілую 
+                    і дякую що ти зі мною.</p>
+                <p class="typing-text"> <span class="love-you-text">Я люблю тебе!</span></p>
+                <p class="typing-text">Твій <span class="my-name">Саша</span>)</p>
+                
+                
+                <div class="song-selector">
+                    <select id="songSelect">
+                        <option value="music/whereyou.mp3">Я тебе люблю</option>
+                        <option value="music/KALUSH - Stefania Kalush Orchestra.mp3">Стефанія</option>
+                        <option value="music/PATSYKI Z FRANEKA - Vasya Omg Remaster (2).mp3">Вася)</option>
+                        <option value="music/Где Фантом - Я тебя люблю.mp3">Де ти була?</option>
+                      </select>  
+                  </div>  
+
+                  <audio id="audioPlayer" controls autoplay>
+                    <source src="music/whereyou.mp3" type="audio/mpeg" id="audioSource">
+                    Ваш браузер не поддерживает элемент audio.
+                  </audio> 
+                                            
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Подключение JavaScript файла -->
+</body>
+</html>

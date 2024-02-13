@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url("background.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+    animation: changeColor 2s infinite alternate;
+    flex-direction: column;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: rgba(124, 87, 90, 0.9);
+        /* Начальный цвет фона */
+    }
+
+    50% {
+        background-color: rgba(121, 60, 75, 0.9);
+        /* Конечный цвет фона */
+    }
+
+    100% {
+        background-color: rgba(151, 114, 114, 0.9);
+        /* Конечный цвет фона */
+    }
+}
+
+h1 {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    /* Тень текста с обводкой */
+    cursor: default;
+    text-align: center;
+    font-size: 2em;
+    color: #ff0000bd;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+    font-weight: 700;
+    text-shadow: #3aa88d;
+    text-align-last: center;
+    font-size: 3vh;
+    font-style: italic;
+    cursor: default;
+    /* Добавляем это свойство для предотвращения изменения курсора */
+}
+
+
+.card .cats-img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Увеличиваем размер на 10% */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cats-img:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+
+/* Добавляем анимацию плавного увеличения размера текста */
+.typing-text {
+    transition: font-size 0.3s ease;
+}
+
+/* CSS для анимации увеличения размера текста при наведении */
+.my-name:hover,
+.her-name:hover {
+    font-size: 1.2em;
+    /* Измените значение, чтобы подобрать желаемый размер */
+}
+
+.song-selector {
+    margin-bottom: 1vb;
+}
+
+.love-you-text {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 3vh;
+    color: #cc0000;
+}
+
+.songSelect {
+    background-color: #79a59a;
+}
+
+/* Стили для кнопки */
+#showContentButton {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ff00008c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#songSelect {
+    /* Общие стили */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin: 0 auto;
+
+    /* Стили для фокуса */
+    &:focus {
+        outline: none;
+        border-color: #ff6699;
+    }
+
+    /* Стили для опций */
+    option {
+        padding: 5px;
+    }
+
+    /* Стили для выбранной опции */
+    option:selected {
+        background-color: #ff6699;
+        color: #fff;
+    }
+}
+
+#showContentButton:hover {
+    background-color: #cc0000;
+}
+
+/* Стили для скрытого контента */
+#hiddenContent {
+    /* Добавляем анимацию к скрытому контенту */
+    animation: fadeIn 0.5s ease-in-out forwards;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+#hiddenContent.fadeOut {
+    /* Применяем анимацию fadeOut при скрытии */
+    animation: fadeOut 0.5s ease-in-out forwards;
+    /* Добавляем forwards для сохранения состояния анимации */
+    display: block;
+    /* Возвращаем display: block для правильного применения анимации */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+.typing {
+    opacity: 0;
+    animation: typing 2s linear forwards;
+}
+
+@keyframes typing {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

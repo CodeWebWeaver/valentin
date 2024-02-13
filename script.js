@@ -43,6 +43,7 @@ window.addEventListener('load', function() {
     window.scrollTo(0, 0);
 });
 
+
 document.getElementById('songSelect').addEventListener('change', function() {
     var selectedSong = this.value;
     var audioPlayer = document.getElementById('audioPlayer');

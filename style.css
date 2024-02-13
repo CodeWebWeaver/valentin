@@ -21,9 +21,20 @@ body {
     max-width: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     height: auto;
-    animation: changeColor 2s infinite alternate;
+    animation: unfoldCard 1s ease forwards, changeColor 2s infinite alternate;
     flex-direction: column;
 }
+
+@keyframes unfoldCard {
+    from {
+        transform: scaleX(0) scaleY(0);
+    }
+
+    to {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
 
 @keyframes changeColor {
     0% {
